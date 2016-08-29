@@ -49,3 +49,12 @@ start_codon
 stop_codon
 three_prime_utr
 transcript
+CDS
+Selenocysteine
+exon
+five_prime_utr
+gene
+start_codon
+stop_codon
+three_prime_utr
+transcript
