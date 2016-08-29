@@ -1,0 +1,23 @@
+Basic Exercises
+
+1
+/Users/cmdb/data/day1-homework $ fastqc /Users/cmdb/data/fastq/SRR072893.fastq.gz 
+/Users/cmdb/data/fastq $ cp SRR072893_fastqc.html /Users/cmdb/data/day1-homework/
+/Users/cmdb/data/day1-homework $ open SRR072893_fastqc.html 
+
+2
+/Users/cmdb/data/fastq $ hisat2 -p 4 -x /Users/cmdb/data/BDGP6/BDGP6 -U SRR072893.fastq.gz -S SRR072893.sam
+
+3
+/Users/cmdb/data/fastq $ samtools sort -o SRR072893.bam SRR072893.sam
+cp SRR072893.bam /Users/cmdb/qbb2016-answers/day1-homework/
+
+/Users/cmdb/data/fastq $ samtools index -b SRR072893.bam
+/Users/cmdb/data/fastq $ cp SRR072893.bam.bai /Users/cmdb/qbb2016-answers/day1-homework/
+
+4
+/Users/cmdb/data/fastq $ stringtie SRR072893.bam -G /Users/cmdb/data/BDGP6/BDGP6.Ensembl.85.gtf -o SRR072893.gtf -p 4 -e -B
+/Users/cmdb/data/fastq $ cp SRR072893.gtf /Users/cmdb/qbb2016-answers/day1-homework/
+
+
+
