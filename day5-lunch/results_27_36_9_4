@@ -1,0 +1,96 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.029
+Model:                            OLS   Adj. R-squared:                  0.029
+Method:                 Least Squares   F-statistic:                     1041.
+Date:                Fri, 02 Sep 2016   Prob (F-statistic):          4.48e-225
+Time:                        16:42:23   Log-Likelihood:            -2.0458e+05
+No. Observations:               34665   AIC:                         4.092e+05
+Df Residuals:                   34664   BIC:                         4.092e+05
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+x1            -4.8293      0.150    -32.266      0.000        -5.123    -4.536
+==============================================================================
+Omnibus:                    86624.858   Durbin-Watson:                   1.942
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):       2464438887.675
+Skew:                          27.122   Prob(JB):                         0.00
+Kurtosis:                    1308.101   Cond. No.                         1.00
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.013
+Model:                            OLS   Adj. R-squared:                  0.013
+Method:                 Least Squares   F-statistic:                     455.7
+Date:                Fri, 02 Sep 2016   Prob (F-statistic):          1.80e-100
+Time:                        16:43:30   Log-Likelihood:            -2.0486e+05
+No. Observations:               34665   AIC:                         4.097e+05
+Df Residuals:                   34664   BIC:                         4.097e+05
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+x1             3.6305      0.170     21.348      0.000         3.297     3.964
+==============================================================================
+Omnibus:                    86754.757   Durbin-Watson:                   1.913
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):       2481879501.887
+Skew:                          27.227   Prob(JB):                         0.00
+Kurtosis:                    1312.711   Cond. No.                         1.00
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.001
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     46.01
+Date:                Fri, 02 Sep 2016   Prob (F-statistic):           1.20e-11
+Time:                        16:44:00   Log-Likelihood:            -2.0507e+05
+No. Observations:               34665   AIC:                         4.101e+05
+Df Residuals:                   34664   BIC:                         4.101e+05
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+x1            -1.5836      0.233     -6.783      0.000        -2.041    -1.126
+==============================================================================
+Omnibus:                    86427.006   Durbin-Watson:                   1.903
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):       2390158744.331
+Skew:                          26.974   Prob(JB):                         0.00
+Kurtosis:                    1288.260   Cond. No.                         1.00
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.049
+Model:                            OLS   Adj. R-squared:                  0.049
+Method:                 Least Squares   F-statistic:                     1781.
+Date:                Fri, 02 Sep 2016   Prob (F-statistic):               0.00
+Time:                        16:44:16   Log-Likelihood:            -2.0422e+05
+No. Observations:               34665   AIC:                         4.084e+05
+Df Residuals:                   34664   BIC:                         4.085e+05
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+x1             5.0219      0.119     42.200      0.000         4.789     5.255
+==============================================================================
+Omnibus:                    87112.037   Durbin-Watson:                   1.959
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):       2587500560.617
+Skew:                          27.504   Prob(JB):                         0.00
+Kurtosis:                    1340.313   Cond. No.                         1.00
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
