@@ -1,0 +1,32 @@
+Time to Run
+
+Velveth
+	Low coverage: 0.153 sec
+	High coverage: 12.171 sec
+
+Velvetg
+	Low coverage: 0.241 sec
+	High coverage: 23.786 sec
+
+SPAdes
+	Low coverage: 5.625 sec
+	High coverage: 1m50.396 sec
+	
+
+LASTZ
+	Velvet
+		Low Coverage: 1.409 sec
+		High Coverage: 2.095 sec
+	SPAdes
+		Low Coverage: 1.415 sec
+		High Coverage: 1.915 sec
+		
+Python Script
+	Velvet
+		Low Coverage: 0.245 sec
+		High Coverage: 0.242 sec
+	SPAdes
+		Low Coverage: 0.244 sec
+		High Coverage: 0.241 sec	
+
+QUAST: 6.992285 sec
