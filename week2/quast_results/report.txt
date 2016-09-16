@@ -1,0 +1,24 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    rlow_contigs  rhigh_contigs  lowspades_contigs  highspades_contigs
+# contigs (>= 0 bp)         303           16             128                1                 
+# contigs (>= 1000 bp)      0             7              4                  1                 
+# contigs (>= 5000 bp)      0             7              0                  1                 
+# contigs (>= 10000 bp)     0             4              0                  1                 
+# contigs (>= 25000 bp)     0             1              0                  1                 
+# contigs (>= 50000 bp)     0             0              0                  1                 
+Total length (>= 0 bp)      56954         100309         49819              100000            
+Total length (>= 1000 bp)   0             99584          5313               100000            
+Total length (>= 5000 bp)   0             99584          0                  100000            
+Total length (>= 10000 bp)  0             81134          0                  100000            
+Total length (>= 25000 bp)  0             33235          0                  100000            
+Total length (>= 50000 bp)  0             0              0                  100000            
+# contigs                   12            7              20                 1                 
+Largest contig              998           33235          1737               100000            
+Total length                8051          99584          15923              100000            
+GC (%)                      51.27         52.58          51.21              52.59             
+N50                         683           19911          718                100000            
+N75                         542           13440          635                100000            
+L50                         5             2              8                  1                 
+L75                         9             4              13                 1                 
+# N's per 100 kbp           124.21        0.00           0.00               0.00              
