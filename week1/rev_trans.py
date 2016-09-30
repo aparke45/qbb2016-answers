@@ -30,7 +30,7 @@ for item in itertools.izip(nucleotides, aminos):
             codon = nuc_s[n:n+3]
             n += 3
             seq.append(codon)
-        print ">" + str(item[0])
-        print "".join(seq)
+    print ">" + item[0][0]
+    print "".join(seq)
 
 

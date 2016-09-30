@@ -2,15 +2,14 @@
 
 import sys
 import itertools
-import fasta
+import fastap
 import matplotlib.pyplot as plt
 import numpy as np
 from itertools import cycle
 import scipy.stats as stats
 
-
-query = fasta.FASTAReader(open(sys.argv[1]))
-nucleoseqs = fasta.FASTAReader(open(sys.argv[2]))
+query_reader = fastap.FASTAReader(open(sys.argv[1]))
+nucleoseqs_reader = fastap.FASTAReader(open(sys.argv[2]))
 
 codontable = {
     'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
@@ -35,44 +34,47 @@ codontable = {
 # The above codon table is from http://stackoverflow.com/questions/19521905/translation-dna-to-protein.   
 
 query = []
-for identifier, sequence in query:
-    query = [sequence[i:i+3] for i in range(0, len(sequence), 3)]
+for identifier, sequence in query_reader:
+    query.append([sequence[i:i+3] for i in range(0, len(sequence), 3)])
 
 nucleoseqs = []  
-for identifier2, sequence2 in nucleoseqs:
-    nucleoseqs = [sequence2[i:i+3] for i in range(0, len(sequence2), 3)]
+for identifier2, sequence2 in nucleoseqs_reader:
+    nucleoseqs.append([sequence2[i:i+3] for i in range(0, len(sequence2), 3)])
 
 
 syn = {}
 nonsyn = {}
 
-for index, i in enumerate(query):
+for index, i in enumerate(query[0]):
     syn[index] = 0
     nonsyn[index] = 0
 index = 0
     
 
 for (n,q) in zip(nucleoseqs, cycle(query)):
-    if n not in codontable:
-        continue
-    elif codontable[n] == codontable[q]:
-        if n == q:
+    for index, (codon_n, codon_q) in enumerate(zip(n,q)):
+        if codon_n not in codontable:
             continue
+        elif codon_q not in codontable:
+            continue
+        elif codontable[codon_n] == codontable[codon_q]:
+            if codon_n == codon_q:
+                continue
+            else:
+                syn[index] += 1
         else:
-            syn[index] += 1
-    else:
-        nonsyn[index] += 1
-    if index <= 3427:
-        index += 3
-    else:
-        index = 0
+            nonsyn[index] += 1
+        if index <= 3427:
+            index += 3
+        else:
+            index = 0
 
-print index, syn[index]
+#print index, syn[index]
 
 dNdSrat = []
 
 
-for index in syn and nonsyn:
+for index in sorted(syn.keys()):
     dNdSrat.append((syn[index], nonsyn[index]))
 
 d_list = []
@@ -80,10 +82,7 @@ d_list = []
 for item in dNdSrat:
     d_list.append(item[1]-item[0])
 
-keys = []
-for index in syn:
-    keys.append(index)
-
+keys = syn.keys()
 
 array = np.array(d_list)
 
