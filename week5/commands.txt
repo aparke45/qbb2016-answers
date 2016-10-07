@@ -1,0 +1,19 @@
+Commands Used for GWAS Assignment 
+
+plink2 --vcf BYxRM_GenoData.vcf --pca 2 header tabs var-wts
+# For PCA analysis
+
+plink2 -vcf BYxRM_GenoData.vcf --freq --out freq
+# To make allele frequency.
+
+./pca2scatter.py plink.eigenvec
+# To make scatter plot of principal component analysis.
+
+./histalfreq.py freq.frq 
+# To make histogram of allele frequencies.
+
+./phenoconvert.py BYxRM_PhenoData.txt > phenoplink2format
+# To convert phenotype file to format for plink2.
+
+./manhattanplotmaker.py *.qassoc
+# To create a Manhattan plot for each phenotypic association.
