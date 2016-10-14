@@ -1,0 +1,22 @@
+bowtie2-build chr19.fa chrom19
+
+bowtie2 -x chrom19 input_ER4.fastq > input_ER4.sam
+
+bowtie2 -x chrom19 input_G1E.fastq > input_G1E.sam
+
+bowtie2 -x chrom19 CTCF_ER4.fastq > CTCF_ER4.sam
+
+bowtie2 -x chrom19 CTCF_G1E.fastq > CTCF_G1E.sam
+
+macs2 callpeak -t CTCF_ER4.sam -c input_ER4.sam -g mm --outdir CTCF_ER4_macs2
+
+macs2 callpeak -t CTCF_G1E.sam -c input_G1E.sam -g mm --outdir CTCF_G1E_macs2
+
+bedtools subtract -a CTCF_G1E_macs2/NA_peaks.narrowPeak -b CTCF_ER4_macs2/NA_peaks.narrowPeak -A > G1EminusER4.bed
+
+bedtools subtract -a CTCF_ER4_macs2/NA_peaks.narrowPeak -b CTCF_G1E_macs2/NA_peaks.narrowPeak -A > ER4minusG1E.bed
+
+sort -nrk5 ER4minusG1E.bed | head -n 100 > sortedER4minusG1E.bed
+
+/usr/local/opt/meme/bin/meme-chip -db JASPAR_CORE_2016.meme idseqs100peaks.fa -o motif_finder -meme-maxw 20
+
