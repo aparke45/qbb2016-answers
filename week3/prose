@@ -1,0 +1,6 @@
+Results of snpEff
+
+Running snpEff would have annotated the variants and the changes they would have caused. In other words, snpEff would take each variant and predict its effect.
+
+Consequences of Filtered Variants
+Each of the three filtered variant is the filtering of variants from the three different mouse lines.  Filtering reduces heavily the number of variants, for each mouse line.
