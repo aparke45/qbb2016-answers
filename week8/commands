@@ -1,0 +1,19 @@
+brew uninstall python
+
+brew install python
+
+sudo chmod -R a+rwx /usr/local
+
+brew postinstall python
+
+sudo pip install virtualenv
+
+pip install pillow h5py
+
+pip install https://github.com/bxlab/hifive/archive/master.zip
+
+hifive 5c-complete express -C Nora_ESC_male_E14.counts -P nora Nora_Primers.bed 
+
+hifive 5c-heatmap nora.fcp fragment.heat -i fragment.png -d fragment
+
+hifive 5c-heatmap nora.fcp enrichment.heat -i enrichment.png -d enrichment
